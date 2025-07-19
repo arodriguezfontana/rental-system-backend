@@ -7,7 +7,7 @@ El objetivo principal fue diseñar y desarrollar una solución mantenible, flexi
 ### Tecnologías
 * Java
 
-### Funcionalidades implementadas
+### Características 
 
 * Diseño orientado a objetos, siguiendo principios SOLID.
 * Uso de patrones de diseño.
