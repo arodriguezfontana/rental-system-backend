@@ -6,10 +6,9 @@ El objetivo principal de este trabajo fue diseñar y desarrollar un sistema mant
 
 ### Funcionalidades implementadas
 
-* Diseño orientado a objetos, siguiendo principios SOLID y patrones de diseño.
-* Modelado de dominio con una definición clara de responsabilidades y relaciones.
+* Diseño orientado a objetos, siguiendo principios SOLID.
+* Utilizacion de patrones de diseño.
 * Pruebas unitarias.
-* Enfoque en la flexibilidad y escalabilidad.
 
 ### Más información
 
