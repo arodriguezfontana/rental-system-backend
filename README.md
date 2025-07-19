@@ -1,14 +1,17 @@
-# Sistema de alquileres
+# Sistema de Alquileres
 
-Este repositorio contiene una implementación en Java de un sistema orientado a conectar directamente a propietarios particulares con potenciales inquilinos interesados en alquilar inmuebles.
+Este proyecto consiste en un sistema de alquileres que facilita la conexión entre propietarios y potenciales inquilinos.
 
-El objetivo principal de este trabajo fue diseñar y desarrollar un sistema mantenible, flexible y escalable, aplicando las mejores prácticas de la programación orientada a objetos.
+El objetivo principal fue diseñar y desarrollar una solución mantenible, flexible y escalable, aplicando buenas prácticas de programación orientada a objetos.
+
+### Tecnologías
+* Java
 
 ### Funcionalidades implementadas
 
 * Diseño orientado a objetos, siguiendo principios SOLID.
-* Utilizacion de patrones de diseño.
-* Pruebas unitarias.
+* Uso de patrones de diseño.
+* Desarrollo de pruebas unitarias.
 
 ### Más información
 
