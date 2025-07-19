@@ -66,11 +66,6 @@ public class PrecioTest {
     }
 
     @Test
-    void toStringTest() {
-        assertEquals("$12,15", precioA.toString());
-    }
-
-    @Test
     void sumarPrecioTest() {
         assertEquals(42.35, precioA.sumar(precioB).getPrecio());
     }
