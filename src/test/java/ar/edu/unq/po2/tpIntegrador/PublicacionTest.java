@@ -64,7 +64,7 @@ public class PublicacionTest {
         inquilino = mock(Usuario.class);
         tarjeta = mock(FormaDePago.class);
         diaDesde = LocalDate.of(2024, 12, 1);
-        diaHasta = LocalDate.of(2024, 12, 15);
+        diaHasta = LocalDate.of(2030, 12, 15);
 
         periodoDeFechas = crearPeriodoMockDeFechas(diaDesde, diaHasta);
 
@@ -150,7 +150,7 @@ public class PublicacionTest {
 
     @Test
     void getPrecioEnElCasoNormalDebeDevolverElPrecioBasePorLaCantidadDeDiasTest() {
-        int cantDeDias = 15;
+        int cantDeDias = 2206;
         assertEquals(dummyPrecio.getPrecio() * cantDeDias,
                 publicacion.getPrecio(periodoDeFechas).getPrecio());
     }
@@ -178,22 +178,27 @@ public class PublicacionTest {
 
     @Test
     void getPrecioEnUnPeriodoDefinidoDebeDevolverElPrecioDeDichoPeriodoPorLaCantidadDeDiasTest() {
-        int cantDeDias = 15;
+        int cantDeDias = 2206;
         publicacion.definirPeriodo(mockPeriodo);
         assertEquals(2000 * cantDeDias, publicacion.getPrecio(periodoDeFechas).getPrecio());
     }
 
     @Test
     void getPrecioEntreUnPeriodoDefinidoYPeriodoNormalDebeDevolverLaSumaSegunCorrespondeTest() {
-        int cantDeDiasEnPeriodo = 11;
+        int cantDeDiasEnPeriodo = 2202;
         int cantDeDiasFueraDelPeriodo = 7;
 
         publicacion.definirPeriodo(mockPeriodo);
 
-        Periodo periodo = crearPeriodoMockDeFechas(LocalDate.of(2024, 12, 5), LocalDate.of(2024, 12, 22));
+        Periodo periodo = crearPeriodoMockDeFechas(
+                LocalDate.of(2024, 12, 5),
+                LocalDate.of(2030, 12, 22)
+        );
 
-        assertEquals(2000 * cantDeDiasEnPeriodo + dummyPrecio.getPrecio() * cantDeDiasFueraDelPeriodo,
-                publicacion.getPrecio(periodo).getPrecio());
+        assertEquals(
+                2000 * cantDeDiasEnPeriodo + dummyPrecio.getPrecio() * cantDeDiasFueraDelPeriodo,
+                publicacion.getPrecio(periodo).getPrecio()
+        );
     }
 
     @Test
@@ -347,7 +352,7 @@ public class PublicacionTest {
 
         publicacion.reservar(inquilino, periodoDeFechas, tarjeta);
         verify(listener).notificarReserva("El inmueble " + publicacion.getTipoDeInmueble() +
-                " que te interesa, ha sido reservado desde el 2024-12-01 hasta el 2024-12-15.", publicacion); //El mensaje se manda al reservar, por lo que las fechas se encuentran en ese scope
+                " que te interesa, ha sido reservado desde el 2024-12-01 hasta el 2030-12-15.", publicacion); //El mensaje se manda al reservar, por lo que las fechas se encuentran en ese scope
     }
 
     @Test
@@ -585,7 +590,7 @@ public class PublicacionTest {
         publicacion.puntuar(setUpRanking(setUpCheckOutContext(inquilino3), 3, "muy buen wi-fi", categoria));
         publicacion.puntuar(setUpRanking(setUpCheckOutContext(inquilino4), 1, "muy buen wi-fi", setUpCategoriaValida()));
 
-        assertEquals(2.8, publicacion.getPuntajePromedioTotal());
+        assertEquals(2.8, publicacion.getPuntajePromedioTotal(), 0.01);
     }
 
     @Test

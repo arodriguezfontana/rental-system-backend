@@ -7,12 +7,11 @@ import java.util.stream.Stream;
 public class RankingUtils {
 
     private static double getPuntajePromedioDeRankings(Stream<Ranking> str){
-        DecimalFormat formato = new DecimalFormat("#.#");
-        return Double.parseDouble(formato.format(
+        return Math.round(
                 str.mapToInt(Ranking::getPuntaje)
                         .average()
-                        .orElseThrow()
-        ));
+                        .orElseThrow() * 10.0
+        ) / 10.0;
     }
 
     public static double getPuntajePromedioEnCategoria(List<Ranking> rankings, Categoria categoria) {

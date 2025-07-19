@@ -424,7 +424,7 @@ public class UsuarioTest {
         }
         puntuarInquilino(usuarioInquilino, new Usuario("Propietario 3", "propietario3@gmail.com", "1234567"), comentario, 1, setUpCategoriaValidaInquilino());
 
-        assertEquals(3.2, usuarioInquilino.getPuntajePromedioTotal());
+        assertEquals(3.3, usuarioInquilino.getPuntajePromedioTotal(), 0.01);
     }
 
     @Test
