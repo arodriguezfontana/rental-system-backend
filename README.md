@@ -14,6 +14,11 @@ El objetivo principal fue diseñar y desarrollar una solución mantenible, flexi
 * Uso de patrones de diseño.
 * Desarrollo de pruebas unitarias.
 
+### Diagrama UML
+<p>
+  <img src="./uml.svg" alt="UML del proyecto" width="500"/>
+</p>
+
 ### Más información
 
 Este proyecto fue desarrollado en grupo junto a dos compañeros para la materia Programación Orientada a Objetos 2. Decidí crear este repositorio ya que no me fue posible hacer un fork del original.
