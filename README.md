@@ -9,10 +9,9 @@ El objetivo principal fue diseñar y desarrollar una solución mantenible, flexi
 * JUnit
 
 ### Características 
-
 * Diseño orientado a objetos, siguiendo principios SOLID.
-* Uso de patrones de diseño.
-* Desarrollo de pruebas unitarias.
+* Uso de multiples patrones de diseño.
+* Desarrollo de pruebas unitarias y de integración.
 
 ### Diagrama UML
 <p>
@@ -21,4 +20,4 @@ El objetivo principal fue diseñar y desarrollar una solución mantenible, flexi
 
 ### Más información
 
-Este proyecto fue desarrollado en grupo junto a dos compañeros para la materia Programación Orientada a Objetos 2. Decidí crear este repositorio ya que no me fue posible hacer un fork del original.
+Este proyecto fue desarrollado en grupo junto a 2 compañeros para la materia Programación Orientada a Objetos 2. Decidí crear este repositorio ya que no me fue posible hacer un fork del original.
